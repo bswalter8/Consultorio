@@ -18,6 +18,7 @@ function isLinkInViewport(elem) {
 function HeaderColor() {
   if (window.pageYOffset > header.offsetHeight*6) {
     header.style.backgroundColor = "#89D0B6";
+  
     header.style.height='11vh';
     header.style.transitionProperty ="height";
     header.style.transitionTimingFunction ='ease-in-out';
@@ -43,47 +44,45 @@ window.addEventListener("scroll", (event) => {
   LinkColor();
 });
 
+//Funcion de scrollIntoView en Js Vainilla para usarse en Safari
+
+function animate(elem,time) {
+	if( !elem) return;
+	let to = elem.offsetTop;
+	let from = window.scrollY;
+    let start = new Date().getTime(),
+        timer = setInterval(() => {
+            let step = Math.min(1,(new Date().getTime()-start)/time);
+            window.scrollTo(0,(from+step*(to-from))+1);
+            if( step == 1){ clearInterval(timer);};
+        },25);
+    	window.scrollTo(0,(from+1));
+	}
+
+	function scrollToMyDiv(div,time){
+		let divVal = document.getElementById(div);
+		animate(div,time);
+		console.log("working"+divVal);
+	}
+
 
 const smoothScroll = () =>{
   let anchorlinks = document.querySelectorAll('a[href^="#"]')
- 
+
   for (let item of anchorlinks) {  
       item.addEventListener('click', (e)=> {
           let hashval = item.getAttribute('href')
-          
           let target = document.querySelector(hashval)
-          target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-          })
+          scrollToMyDiv(target,500);
           history.pushState(null, null, hashval)
-          e.preventDefault()
+          e.preventDefault();
       })
   }
 }
 
-/*function noScroll (callback, refresh = 100) {
-  if (!callback || typeof callback !== 'function') return;
-  let isScrolling;
-  window.addEventListener('scroll', function (event) {
-    logo.style.display = 'none';
-    logoGif.style.display = 'block';
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(callback, refresh);
-  }, false);
-}
 
-noScroll(function () {
-  // Scroll parado
-  timeout = setTimeout(()=>{
-    logo.style.display = 'block';
-    logoGif.style.display = 'none';
-  }, 400);
-  
-});*/
 
 
 
 
 smoothScroll();
-//modalFunction();
