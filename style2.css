@@ -889,7 +889,7 @@ footer {
     margin-left: 10%;
    
     grid-template-columns: repeat(2, 1fr);
-  
+    height: max-content;
     grid-gap: 10px;   
    
 }
@@ -901,6 +901,7 @@ footer {
 /*------------------Consultorio---------------------------*/
 
 .consultorio{
+    margin-top: 4vh;
     height: 50vh  
 
 }
@@ -938,25 +939,33 @@ footer {
 
 /*------------------Contacto---------------------------*/
 
+.contacto{
+    margin-top: 4vh;
+      
+}
+
 .contact__info__container{
     transform: translateX(2vw);
     margin: 4vh;
     padding: 2vh;
 
     width: 70%;
-    height: 25%;
+    height: 50%;
 
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content:space-evenly;
     align-items: center;
  
 }
 
-.text__nav{
-  
+.contact__info__container--green{
+    padding: 1vh; 
+    height: 30%;
+ 
 }
 
 .text__nav--texto{
+    width: 63vw;
     font-size: 3vw;
 }
 
