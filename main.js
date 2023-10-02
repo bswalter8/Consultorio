@@ -1,10 +1,31 @@
 const linksColor = document.querySelectorAll(".link__color--Scroll");
 const sections = document.querySelectorAll("section");
+//const menu = document.getElementById("menuResponsive");
+
 
 let isMenuShow = false;
 
 
+/*menu.addEventListener('click', (e)=> {
+  let navBar = document.querySelector("active");
+  navBar.style.display="block";
+  e.preventDefault();
+});*/
 
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+
+});
 
 function isLinkInViewport(elem) {
   let distance = elem.getBoundingClientRect();
@@ -79,7 +100,6 @@ const smoothScroll = () =>{
       })
   }
 }
-
 
 
 

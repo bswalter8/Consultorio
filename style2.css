@@ -26,10 +26,32 @@ a{
     display: none;
 }
 
+
+.whatsApp{
+    width: fit-content;
+    height: fit-content;
+    position: sticky;
+    top: 85vh;
+    left: 90vw;
+}
+
+
+.whatsApp a img{
+    opacity: 0.6;
+    width: 8vw;
+}
+
+
+.whatsApp a img:hover {
+    opacity: 1;
+  }
+  
+
 /*-------Header-----------------------------------*/
 
 
 header {
+
     display: flex;
     flex-direction: row;
     background-color: #89D0B6;
@@ -106,21 +128,38 @@ nav a{
 }
 
 
+.toggle-nav{
+    display: none;
+}
+
+.active{
+    display: none;
+}
+
 
 /*------------------Main---------------------------*/
 
 .main{
-    margin-top: 8vh;
-    background-image: url("img/CONSULTORIO/HOME-CONSULTORIO.jpg");
-   
+    margin-top: -4.5vh;
+    transform: translateY(-5vh);
+    background-image: url("img/CONSULTORIO/home.jpg");
+    background-size: cover;
     height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:center;
+    align-items: center;
+}
+
+.main svg{
+    margin-left: 50vw;
 }
 
 .main--img{
+    display: block;
+  /*  width: auto;
+    height: 100%;*/
     width: 50vw;
     height: 70vh;   
 }
@@ -136,22 +175,23 @@ nav a{
 }
 
 .container__text--center{
-  
-    display: flex;
+   
+   /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    
 }
 
 .container__text--center h3{
-    margin-bottom: 30%;
+  /*  margin-bottom: 30%;
     margin-top: 5vh;
     max-width: 30rem;
     text-align: center;
     font-family: 'Roboto';
     color: white;
     font-size:  .9rem;
-    line-height: 1.8rem;
+    line-height: 1.8rem;*/
 }
 
 
@@ -423,7 +463,7 @@ nav a{
 }
 
 .work__projects__card--svg svg path{
-    fill: black;
+    fill: #49B590;
 }
 
 
@@ -518,6 +558,12 @@ nav a{
 
 }
 
+.swiper {
+    display: none;
+    width: 0vw;
+    height: 0vh;
+}
+
 .consultorio__grid{
     margin-left: 13%;
     width: 80vw;
@@ -543,10 +589,11 @@ nav a{
 }
 
 .contacto--header{
-    transform: translateY(-5vh);
+   /* transform: translateY(-5vh);*/
 }
 
 .contact__info__container{
+    margin-top: 5vh;
     margin-left: 15vw;
     background-color: #58D0A7;
     width: 70%;
@@ -619,6 +666,7 @@ footer {
     color: white;
     width: 30%;
 }
+
 .footer__nav--texto{
     margin-left: 1vw;
 }
@@ -656,946 +704,262 @@ footer {
     background-color: #000000bd;
     overflow-y:hidden;
   }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 8% auto; /* 15% from the top and centered */
-    margin-bottom: 8%;
-    border-radius: 20px;
-    border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
-  }
-  
-  .modal--show {
-    opacity: 1;
-    transition: opacity 0.6s;
-  }
-
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close img{
-      margin-top: 1rem;
-      width: 50%;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-  /*------------ Modal Styles---------- */
-
-  .project--item__modal{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%
-  }
-
-    .mySwiperModal{
-        width: 100%;
-        height: 100%;
-    }
-
-   #img__Carr{
-       height: 100%;
-       width: 100%;
-   } 
-
-   .swiper-slide video {
-    width: 30vw;
-   }
-
-  .project--item__modal--text{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30vw;
-    margin-left: 2rem;
-  }
-  
-  .project--item__modal--text h3{
-    margin-top: 1rem;  
-    font-family: "Poppins";
-    font-weight: 1000;
-  }
-  .project--item__modal--text p{
-    font-family: "Poppins";
-    font-weight: 200;
-  }
-
-.project--item__modal--textDesc{
-    margin-top: 1rem; 
-    width: 20vw;
-    word-wrap: break-word;
-    font-family: "Poppins";
-    font-weight: 500;    
-}
-
-.project--item__modal--text button {
-    font-family: "Poppins";
-    width: 10rem;
-    font-size: 1rem;
-    border: 1.5px solid #272343;
-    background-color: transparent;
-    border-radius: 50px;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    padding: .5rem;
-    margin-bottom: 1rem;
-}
-
-  
-  .tools--img img{
-    width: 3vw;
-    height: min-content;
-  }
-
-  .swiper-button-next {
-    background-image: url("img/button_right.png") !important;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-  }
-
-
-  .swiper-button-prev {
-    background-image: url("img/Button_left.png") !important;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-  }
-
-
-  .swiper-button-next::after {
-    display: none;
-  }
-
-  .swiper-button-prev::after {
-    display: none;
-  }
-
-  .link__modal{
-      text-decoration: underline;
-  }
-
+   
+ 
 
 /*-----------------------------------------------------Responsive---------------------------------------*/
 
 @media (max-width: 668px) {
-    
-    .menuResponsive--button{
-        display: block;
-        width: 10vw;
-        margin-left: 2vw;
-    }    
 
-    .menu__responisve{
+    .whatsApp a img{
+
+        width: 20vw;
+    }
+    
+
+/*-----header----*/  
+
+    .header__logo__container{
+
+        width: 28vw;
+    }
+
+
+    .toggle-nav{
         display: none;
-        opacity: .96;
-        top: 9vh;
-        right: 0vw;
-        border-bottom-left-radius: 30px ;
-        position: fixed;
-        background-color: white;
-        
-        flex-direction: column;
-        padding: 12vw;
-        font-size: 1.4rem;
-        align-content: space-between;
-        justify-content: space-around;
     }
-
-    #loading img{
-        margin-left: 25vw;
-        margin-top: 30vh;
-        width: 50%;
-        height: 40%;
-    }
-
-    /*-------Header-----------------------------------*/
-
     
-            header {
-                display: flex;
-                flex-direction: row;
-                background-color: #45C1F0;
-                justify-content: space-evenly;
-                align-items: center;
-                width: 100vw;
-                height: 10vh;
-                position: sticky;
-                top: 0; 
-                z-index: 1000;
-            }
-
-            .header__logo{
-                margin-left: 5%;
-                display: flex;
-                align-items: center;
-
-            }
-
-            .header__logo__container{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 16vw;
-            }
-
-            .header__logo--img{
-                
-                max-width:100%;
-                max-height:100%;
-            }
-
-            .header__logo--imgGIF{
-                display: none;
-                max-height:100%;
-                max-width:120%;
-                object-fit: contain;
-            }
-
-            .header__logo--text{
-                margin-left: 1rem;   
-                width: 10rem;
-                font-family: 'poppins';
-                font-size: 2.5vh;
-                text-justify: center;
-                color: #272343;
-                line-height: 1.4rem;
-            }
-
-            nav{
-            
-                display: none;
-            }
-
-      
+    .text__nav{
+        display: flex;
+        flex-direction: row;
+       
+        margin-right: 0rem;
+    }
+    
+    .text__nav--home{
+        display: flex;
+        width: 40vw;
+        flex-direction: column;
+        margin: 1vw;
+        font-size: 3vw;
+        margin-right: 0vw;
+    }
 
 
-            .social img{
-                display: none;
-            }
 
- 
-
-
-/*------------------Main Responsive---------------------------*/
-
-
+/*-----home----*/    
 
     .main{
-    
-        background-image: url("img/Home\ fondo\ chispas.png");
-    
-        height: 90vh;
+        margin-top: 2vh;
+        background-image: url("img/CONSULTORIO/home.jpg");
+        background-size: cover;
+        opacity: .6;
+        height: 65vh;
         width: 100vw;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .container__text{
-        margin-top: 10vh;
-        display: flex;
-        
         flex-direction: row;
-        justify-content: center;
+        justify-content:center;
         align-items: center;
     }
 
-    .container__text--center{
-        z-index: 100;
-        background-color: #45C1F0;
-        color: #272343;
-        opacity: 0.95;
-        line-height: 4rem;
-        transform: translatex(0%);
+    .main svg{
+        margin-left: 0vw;
+        width: 80%;
     }
 
-    .container__text--center h2{
+/*------------------Footer---------------------------*/
 
-        margin-bottom: 1rem;
-        font-family: 'Bauhaus 93';
-        line-height: 2.1rem;
-        font-size:  2.2rem;
-    }
+footer {
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    color: white;
+    font-family: 'Poppins';
+}
 
-    .container__text--center h3{
-
-      
-        font-family: "Poppins";
-        font-size:  .7rem;
-        line-height: 1.5rem;
-    }
-
-    .container__text--center button {
-        border: 1px solid #272343;
-        border-radius: 20px;
-        font-family:"Poppins";
-        background-color: transparent;
-        height: 5vh;
-        margin-left: 1rem;
-    }
-
-    .container__text--center button  p{
-        padding: 0rem;
-        width: 7rem;
-        
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    .container__img{
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        height: max-content;
-    }
-
-    .main--img{  
-        width: 100vw;   
-    }
-
-    /*------------------About me Responsive---------------------------*/
-
-        .about{
-            height: 230vh;  
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            margin-top: 10vh;
-        }
-
-        .about__content{
-
-            height: 35%;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .about__content img{
-            width: 90vw;
-            border-radius: 33px;
-            margin-bottom: 2rem;
-        }
-
-
-        .about__content--text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 10vw;
-            width: 90%;
-            margin-bottom: 2rem;
-        }
-
-        .about__content__text--description{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-      
-            font-size: 2vh; 
-        }
-
-        .about__content--text h2{
-            font-family: 'Bauhaus 93';
-            font-size: 2rem;
-            margin-bottom: 2rrem;
-            color: #272343;
-        }
-
-        .about__content--text p {
-            font-size: .7rem;
-            font-family: "Poppins";
-            font-weight: bold;
-        }
-
-        .about__content--carr{
-            background-color: #FF8BD2;
-        
-        }
-
-
-        .containers{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-        .containerSkills{
-            margin: 1rem;
-            width: 90%;
-            padding: .2rem;
-
-            height: 45vh;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;  
-        }
-
-        .container--pink{
-            background-color: #FF8BD2;
-        }
-
-        .container--yellow{
-            background-color: #FFDD80;
-        }
-
-        .container--blue{
-            background-color: #45C1F0;
-        }
-
-
-        .containerSkills h3{
-            font-family: 'Bauhaus 93';
-            font-size: 1.5em;
-            color: #272343;
-        }
-        .containerSkills p{
-            font-family: "Poppins";
-            font-size: 2vh;
-            font-weight: 400;
-
-            padding:  0 1rem 6rem 3rem;    
-        }
-
-        .containerSkills img{
-            width: 50%;
-        }
-
-        /*------------------My work Responsive---------------------------*/
-
-        .work{
-            height: max-content;  
-            display: flex;
-            flex-direction: column;
-        
+.footer__container{
     
-            width: 100vw;
-            margin-top: 4vh;
-            background-color: #F3FBFB;
-        }
-
-        .work__header{
-            position: sticky;
-            z-index: 1;
-            top: -6vh;
-            height: 25vh;
-            display: flex;
-            flex-direction: column;
-            background-color:  #F3FBFB;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .work__header h2{
-            text-align: center;
-            font-size: 2rem;
-            font-family: 'Bauhaus 93';
-            margin-top: 3rem;
-            color: #272343;
-        }
-
-        .work__header p{
-            font-family: "Poppins";
-        
-            font-size: 1.2rem;
-        }
-
-        .work__header button{
-            font-family: "Poppins";  
-            height: 3rem;
-            width: 4.5rem;
-            font-size: .6rem;
-            border: 1px solid #272343;
-            background-color: transparent;
-            border-radius: 50px;
-            margin-left: .2rem;
-            margin-top: .4rem;
-            margin-bottom: .2rem;
-            padding: .5rem;
-        }
-   
-        .b--grid{
-            display: flex;
-            flex-direction: row;
-        }
-
-        .work__projects{
-            margin-left:0%;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-items: center;
-            align-items: center;
-            grid-gap: 2px;   
-            font-size: .6rem;
-            margin-top: 3%;
-        
-        }
-
-        .project--item{
-            margin: 2%;
-            display: flex;
-            flex-direction: column;
-            width: 37vw;
-            font-family: "Poppins";
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .project--item input{
-            border-radius: 10px;
-            width: 37vw;
-            height: min-content;
-        }
-
-        .project--item__p{
-            width: 38vw;
-         text-align: center;
-        }
-
-        /*------------------Comissions Responsive---------------------------*/
-
-        .comissions{
-            width: 100vw;
-            height: 90vh;  
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin-top: 5vh;
-        }
-
-        .com__parallax{
-            position: absolute; 
-            overflow: hidden;
-            width: 100%;
-        
-            z-index: -1;
-        
-        }
-
-        .com__parallax img{
-            margin-top: 39%;
-            width: 10vw;
-        }
-
-        .com__open{
-            background:  fixed repeat url("img/Banner\ comisiones.jpg");
-            background-position:center;
-            color: #F3FBFB;
-            height: 40vh;
-            display: flex;
-            margin-top: 4vh;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .com__open h2{
-            
-            font-family: "Bauhaus 93";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1rem;
-            text-align: center;
-            margin-top: 1rem;
-            margin-bottom: 25px;
-        }
-
-        .com__open p{
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 300;
-            font-size: .8rem;
-            line-height: 1em;
-            text-align: center;
-            width: 70%;
-        }
-
-        .com__open button{
-            font-family: "Poppins";
-            width: 15rem;
-            font-size: .7rem;
-            border: 1px solid white;
-            color: white;
-            background-color: transparent;
-            border-radius: 10px;
-            margin-left: .8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            padding: .5rem;
-        }
-
-        .com__open button a{
-            color: white;
-        }
-
-        .com__form {
-            background-color: #FFDD80;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .com__form--contact{
-            font-size: .4rem;
-            margin-top: 10%;
-            margin-left: 5%;
-        }
-
-        .com__form--contact h2{
-            font-size: 1.2rem;
-            font-family: 'Bauhaus 93';
-            color: #272343;
-        }
-
-        .com__form--contact p{
-            font-family: "Poppins";
-            font-size: .8rem;
-            margin-top: 1rem;
-        }
-
-        .com__form--contact h3{
-            margin-top: .7rem;
-            font-family: 'Bauhaus 93';
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        .com__form--contact--mail{
-            margin-top: .8rem;
-            margin-bottom: .3rem;     
-            display: flex;
-        }
-
-        .com__form--contact--mail h3{
-            font-size: 1rem;
-        }
-        .com__form--contact--mail img{
-            margin-top: .6rem;
-            margin-right: 1rem;
-            width: 8%;
-            height: 8%;
-        }
-
-        .img__footer{
-            width: 42%;
-            height: 40%;
-        }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
 
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  
-            width: 90vw;
-            height: 30vh;
-        }
+.footer__nav--texto{
+    font-size: 2vw;
+}
 
-        form h3 {
-            font-size: 1rem;
-            font-family: 'poppins';
-        }
-
-        .form__items{
-            margin-left: 10%;
-        
-        }
-
-        .form--border{
-            border: 1px solid;
-        }
-
-        .form--send{
-
-            box-sizing: border-box;
-            background: #272343;
-            border-radius: 15px;
-            color: white;
-            width: 25%;
-            padding-right: 5px;
-        }
-
-        input::placeholder {
-            font-size: 1.2rem;
-            font-family: "poppins";
-        }
-
-        input{
-            margin-top: 2%;
-            width: 70%;
-            height: 4vh;  
-            /* border: 1px solid ; */
-            border-radius: 3px;
-            padding-left: 5px;
-            background-color: #F3FBFB;
-        }
-
-        .input--mes{
-            margin-top: 2%;
-            width: 70%;
-            height: 10vh;  
-        }
-
-
-        /*------------------Footer Responsive---------------------------*/
-
-
-        footer {
-            display: flex;
-            flex-direction: column;
-            background-color: #272343;
-            justify-content: space-between;
-            align-items: center;
-            width: 100vw;
-            height: 17vh;
-        }
-
-        footer h3 {
-            font-family: "poppins";
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: #fff;
-            margin-top: 10%;
-            margin-left: 0%;
-        }
-
-        .social__footer{
-            margin: .2rem;
-            margin-right: 0%;
-            width: 100vw;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-
-        .social__footer img{
-            width: 2rem;
-            margin-right: 1rem;
-        }
-
-
-        /*------------ Modal Styles Responsive---------- */
-
-        .project--item__modal{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2%
-        }
-
-            .mySwiperModal{
-                width: 80%;
-                height: 80%;
-            }
-
-        #img__Carr{
-            height: 100%;
-            width: 100%;
-        } 
-
-        .swiper-slide video {
-            width: 60vw;
-        }
-
-        .project--item__modal--text{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: max-content;
-            font-size: .2rem;
-            margin-left: 2rem;
-        }
-        
-        .project--item__modal--text h3{
-            margin-top: .6rem;  
-            font-family: "Poppins";
-            font-weight: 1000;
-            font-size: .6rem;
-        }
-        .project--item__modal--text p{
-            font-family: "Poppins";
-            font-weight: 200;
-            margin-left: .3rem;
-            font-size: .5rem;
-        }
-
-        .project--item__modal--textDesc{
-            margin-top: 1rem; 
-            width: 80vw;
-            word-wrap: break-word;
-            font-family: "Poppins";
-            font-weight: 500;   
-            font-size: .5rem; 
-        }
-
-        .project--item__modal--text button {
-            font-family: "Poppins";
-            width: 7rem;
-            font-size: .5rem;
-            border: 1.5px solid #272343;
-            background-color: transparent;
-            border-radius: 50px;
-            margin-left: 4rem;
-            margin-top: 1rem;
-            padding: .5rem;
-            margin-bottom: .2rem;
-        }
-
-        
-        .tools--img img{
-            width: 7vw;
-            height: min-content;
-        }
-
-        .swiper-button-next {
-            background-image: url("img/button_right.png") !important;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: center;
-        }
-
-
-        .swiper-button-prev {
-            background-image: url("img/Button_left.png") !important;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: center;
-        }
-
-
-        .swiper-button-next::after {
-            display: none;
-        }
-
-        .swiper-button-prev::after {
-            display: none;
-        }
-
-        .link__modal{
-            text-decoration: underline;
-        }
-
-    /*------------ Modal (background)---------- */
-    .modal {
-        display: flex; /* Hidden by default */
-        justify-content: center;
-        align-items: center;
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100vw; /* Full width */
-        height: 100%; /* Full height */
-        overflow: hidden; /* Enable scroll if needed */
-        opacity: 0;
-        background-color: #000000bd;
-        overflow-y:hidden;
-    }
-    
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 22% auto; /* 15% from the top and centered */
-        margin-bottom: 8%;
-        border-radius: 20px;
-        border: 1px solid #888;
-        width: 90%; /* Could be more or less, depending on screen size */
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        
-    }
-    
-    .modal--show {
-        opacity: 1;
-        transition: opacity 0.6s;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 10vw;
-        font-weight: bold;
-   
-    }
-
-    .close img{
-        margin-top: 1rem;
-        width: 8%;
-    }
+.footer_copyright{
+    font-size: 2vw;
+    margin-bottom: 4vh;
 
 }
 
-@media (max-width: 378px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        background-color: #272343;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
-        height: 25vh;
-    }
+/*------------------About me---------------------------*/
 
-        footer h3 {
-            font-family: "poppins";
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: #fff;
-            margin-top: 10vh;
-            margin-left: 0%;
-        }
 
-        .work__header{
-            position: sticky;
-            z-index: 1;
-            top: -8vh;
-            height: 25vh;
-            display: flex;
-            flex-direction: column;
-            background-color:  #F3FBFB;
-            justify-content: center;
-            align-items: center;
-        }
-        .work__header button{
-            font-family: "Poppins";  
-            height: 2.4rem;
-            width: 4.5rem;
-            font-size: .6rem;
-            border: 1px solid #272343;
-            background-color: transparent;
-            border-radius: 50px;
-            margin-left: .2rem;
-            margin-top: .4rem;
-            margin-bottom: .4rem;
-            padding: .5rem;
-        }
+.about{
+    height: 200vh;  
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
 }
+
+.about__content--text{
+    font-size: 5vw;
+    height: fit-content;
+
+}
+
+.containers{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.containerSkills{
+
+    margin: 1rem;
+    width: 80%;
+    height: 60vh;
+   
+
+}
+
+.containerSkills__Titulo{
+
+    padding-right: 4vw;
+    font-size: 5.5vw;
+    margin-bottom: 2vh;
+  
+}
+.containerSkills ul{
+
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: 400; 
+}
+
+.consultas--center{
+  transform: translateY(-10vh);
+}
+
+/*------------------My work---------------------------*/
+
+.work{
+
+    height: 110vh;
+    margin-top: 0vh;
+    
+}
+
+.work__header h2{
+   
+    font-size: 5vw;
+}
+
+
+.work__projects{
+    
+    margin-left: 10%;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;   
+    margin-top: 3%;
+}
+
+.work__projects--card{
+    font-size: 3vw;
+   
+    height: 25vh;
+    width: 35vw;
+}
+
+/*------------------Cirujias---------------------------*/
+
+.work__cirujia{
+    margin-top: 10%;
+    margin-left: 10%;
+   
+    grid-template-columns: repeat(2, 1fr);
+  
+    grid-gap: 10px;   
+   
+}
+
+.cirujias{
+    height: 150vh;
+}
+
+/*------------------Consultorio---------------------------*/
+
+.consultorio{
+    height: 50vh  
+
+}
+
+.swiper-button-next {
+    --swiper-navigation-color:white;
+  }
+  
+  .swiper-button-prev {
+    --swiper-navigation-color:white;
+  }
+
+.consultorio__grid{
+    display: none;
+}
+.swiper {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .swiper-slide {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/*------------------Contacto---------------------------*/
+
+.contact__info__container{
+    transform: translateX(2vw);
+    margin: 4vh;
+    padding: 2vh;
+
+    width: 70%;
+    height: 25%;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+ 
+}
+
+.text__nav{
+  
+}
+
+.text__nav--texto{
+    font-size: 3vw;
+}
+
+}
+    
+
