@@ -860,7 +860,7 @@ footer {
 
 
 .about{
-    height: 200vh;  
+    height: 220vh;  
     display: flex;
     flex-direction: column;
     margin-top: 10vh;
@@ -883,9 +883,8 @@ footer {
 
     margin: 1rem;
     width: 80%;
-    height: 60vh;
+    height: 65vh;
    
-
 }
 
 .containerSkills__Titulo{
@@ -900,6 +899,12 @@ footer {
     color: #FFFFFF;
     font-size: 3vw;
     font-weight: 400; 
+}
+
+.about__content--text p{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+   position: relative;
 }
 
 .consultas--center{
