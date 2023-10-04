@@ -1,16 +1,21 @@
 const linksColor = document.querySelectorAll(".link__color--Scroll");
 const sections = document.querySelectorAll("section");
-//const menu = document.getElementById("menuResponsive");
-
+const menu = document.getElementById("menu");
+const menuDrop = document.getElementById("menuDropdown");
 
 let isMenuShow = false;
 
 
-/*menu.addEventListener('click', (e)=> {
-  let navBar = document.querySelector("active");
-  navBar.style.display="block";
+menu.addEventListener('click', (e)=> {
+  if(menuDrop.className==='text__nav--home'){
+    menuDrop.className += " active";
+    menu.className += " active";
+  }else {
+    menuDrop.className ="text__nav--home";
+    menu.className = "menuResponsive";
+  }
   e.preventDefault();
-});*/
+});
 
 
 

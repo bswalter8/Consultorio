@@ -16,11 +16,12 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap"
     rel="stylesheet"
-  />
+     />
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css" media="screen, print">
         @font-face {
             font-family: "Bauhaus 93";
@@ -75,7 +76,7 @@
             </a>
           
 
-            <nav class="text__nav--home">        
+            <nav class="text__nav--home" id="menuDropdown">        
               
                  <div>           
                     <a href="#main" class="link__color--Scroll" >Home</a>
@@ -91,31 +92,25 @@
                 <div> 
                     <a href="#contact" class="link__color--Scroll">Contacto</a>    
                 </div> 
+               
             </nav>
-       
-         <!--   <div class="menu" id="menuResponsive">
-                <ul class="active">
-                    <li class="current-item"><a href="#main" class="link__color--Scroll" >Home</a></li>
-                    <li> <a href="#nosotros" class="link__color--Scroll">Nosotros</a></li>
-                    <li><a href="#work" class="link__color--Scroll">Estudios y Cirujias</a></li>
-                    <li><a href="#contact" class="link__color--Scroll">Contacto</a>   </li>
-                </ul>
+            <a class="menuResponsive" id="menu">&#9776;</a>
             
-                <a class="toggle-nav" href="#">&#9776;</a>
-            </div>-->
+            
+
             
         </header>
         
             <div class="whatsApp">
-                <a  title="WhatsApp, Public domain, via Wikimedia Commons" target="_blank" href="https://wa.me/1123906123/?text=Escribenos%20para%20consultas"><img  alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"></a>
+                <a  title="WhatsApp, Public domain, via Wikimedia Commons" target="_blank" href="https://wa.me/1151074885/?text=Escribenos%20para%20consultas"><img  alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"></a>
             </div>
             <section class="main link_color" id="Home">
                <!--  <div class="container__img">
                    
                    <img class="main--img" src="img/CONSULTORIO/home.jpg">
                  </div> -->
-               <!--   <div class="container__text"> -->
-               <!--  <div class="container__text--center ">-->
+           <div class="container__text"> 
+             <div class="container__text--center ">
                     <svg width="380" height="207" viewBox="0 0 280 107" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.1542 65C22.1679 64.8976 12.0394 59.9645 5.12799 49.3651C-3.3705 36.345 -1.10781 20.5808 10.4469 9.4692C20.8971 -0.574862 38.1622 -3.02253 51.052 4.02934C62.1242 10.1054 68.6978 19.4216 68.9927 32.3608C69.2876 45.3 60.5961 57.6031 48.3979 62.4176C45.9789 63.4021 43.4625 64.125 40.8914 64.5741C38.8646 64.8922 36.7789 64.8814 35.1542 65Z" fill="#307172"/>
                         <path d="M136.077 47.9807C136.077 43.2247 136.149 38.4686 136.044 33.718C135.999 31.7895 136.759 30.9614 138.656 31.0213C140.082 31.0649 141.507 31.0921 142.932 31.1739C143.393 31.1739 144.164 31.2447 144.264 31.4844C145.251 33.9959 146.709 32.514 148.146 32.0728C150.886 31.2447 153.759 31.1521 156.604 31.0595C159.699 30.9614 162.794 31.0104 165.889 31.0268C167.059 31.0268 168.279 30.8688 168.595 32.5631C168.812 33.7126 169.705 33.0534 170.259 32.7864C171.888 31.9738 173.663 31.4815 175.484 31.3373C176.388 31.2883 177.702 30.7271 177.946 32.3288C178.135 33.5219 177.869 34.4481 176.454 34.824C175.628 35.0959 174.844 35.4791 174.125 35.9626C170.481 38.169 168.551 41.4105 168.495 45.6054C168.423 51.2167 168.407 56.8281 168.495 62.4394C168.523 64.368 167.852 65 165.883 65C159.821 65 159.815 65.0653 159.815 59.0999C159.815 51.6961 159.766 44.2924 159.871 36.8887C159.904 34.9329 159.161 34.3173 157.297 34.2519C155.691 34.1727 154.084 34.4126 152.574 34.9573C151.064 35.502 149.681 36.3403 148.508 37.4221C147.335 38.5039 146.396 39.8069 145.748 41.2533C145.1 42.6996 144.755 44.2595 144.735 45.8396C144.657 51.3747 144.657 56.9098 144.735 62.4449C144.774 64.3952 144.069 65.0217 142.106 64.9836C134.679 64.842 136.166 65.3813 136.049 58.9909C135.977 55.3299 136.049 51.6635 136.049 48.0025L136.077 47.9807Z" fill="#307172"/>
@@ -143,11 +138,11 @@
                         <path d="M104.535 98.9966C102.096 99.0527 101.633 98.4359 102.242 95.8119C102.563 94.427 102.921 93.059 103.247 91.6797C103.328 91.3713 103.413 91.0517 103.75 91.0069C104.213 90.9452 104.344 91.3096 104.444 91.7077C104.917 93.5411 105.45 95.3578 105.848 97.208C106.205 98.7555 105.998 98.9573 104.535 98.9966Z" fill="#89D0B6"/>
                         <path d="M187.897 20C188.603 21.0949 190.125 21.686 189.992 23.3258C189.83 25.3151 188.638 26.7955 186.572 26.9857C184.651 27.1656 182.388 25.6235 182.035 23.9015C181.734 22.4057 183.407 20.4832 185.42 20.1285C186.239 20.0329 187.065 19.9917 187.891 20.0051L187.897 20Z" fill="#307172"/>
                     </svg>
-                    <!--          
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequuntur sapiente odit reprehenderit error dignissimos commodi necessitatibus tenetur iste eos obcaecati, a quaerat distinctio, omnis aspernatur quisquam delectus vel repellendus.</h3>
-                    -->    
-               <!--  </div>    -->      
-              <!--    </div>    -->       
+                            
+                    <h3>Somos un centro médico especializado donde nuestro objetivo es brindar una atención de excelencia, con una amplia opción de turnos a cargo de especialistas altamente capacitados y de experiencia.</h3>
+                       
+              </div>         
+            </div>         
             </section>
         <a name="about" id="nosotros"></a>
             <section class="about" id="Nosotros">
@@ -509,7 +504,7 @@
                                     </svg>
                                     
                             </div>                 
-                            <p>Reconstruccion de perforacion ........</p>
+                            <p>Reconstruccion de perforacion timpanica</p>
                         </div>                                
                     </div>
                 </div>
@@ -569,7 +564,7 @@
                                 
                                 <div class="text__nav--texto">
                                     <p>Whatsapp</p>
-                                    <p>+(123) 555-0104-891 <br> +(123) 555-0104-891</p>
+                                    <p>11 5107-4885</p>
                                 </div>
                                 
                             </div>  
@@ -581,7 +576,7 @@
                                 
                                         <div class="text__nav--texto">
                                             <p>Turnos</p>
-                                            <p>Mon-Fri: 9:00AM-10:00PM <br> Sat-Sun: 9:00AM-01:00PM1</p>      
+                                            <p>perezalisedogambiniorl@gmail.com</p>      
                                         </div>
                                 
                                 </div>  
@@ -593,7 +588,7 @@
                                 </svg>
                             
                                     <div class="text__nav--texto">
-                                        <p>Tambien atendermos en Zarate  <br> Direccion y Whatsapp</p>
+                                        <p>Tambien atendemos en Zarate  <br> .Bolivar 1084 Bis <br> .3487 66-2444</p>
                                     </div>
                                 
                             </div> 
@@ -616,7 +611,7 @@
                         <path d="M19.9202 24.3842C19.005 24.3842 18.0603 24.1776 17.0714 23.7495C16.1414 23.351 15.2115 22.8196 14.3111 22.1554C13.4254 21.5059 12.5546 20.7678 11.7576 19.9708C10.9605 19.1589 10.2224 18.3028 9.57289 17.4171C8.90865 16.4872 8.37726 15.572 7.99348 14.6716C7.58017 13.6974 7.37354 12.7379 7.37354 11.8228C7.37354 11.1733 7.49159 10.5533 7.713 9.97767C7.94918 9.37247 8.33297 8.82631 8.83484 8.35396C9.77954 7.42403 11.1376 7.08456 12.2151 7.60119C12.5842 7.76356 12.8941 8.02925 13.1304 8.38351L14.8425 10.7895C15.0196 11.0257 15.1526 11.2766 15.2559 11.5275C15.374 11.8228 15.4478 12.118 15.4478 12.3985C15.4478 12.7822 15.3443 13.166 15.1377 13.5055C15.0048 13.7269 14.813 13.9926 14.562 14.2436L14.3701 14.4502C14.4587 14.5683 14.562 14.7159 14.7244 14.893C15.0344 15.2473 15.3739 15.6311 15.7429 16.0001C16.1119 16.3544 16.4809 16.7086 16.85 17.0186C17.0271 17.1662 17.1748 17.2843 17.2929 17.3581L17.4994 17.1514C17.7651 16.8857 18.031 16.6791 18.2967 16.5462C18.7838 16.2363 19.5364 16.1625 20.2007 16.4429C20.4368 16.5315 20.673 16.6643 20.9239 16.8415L23.3892 18.5832C23.7286 18.8194 23.9942 19.1442 24.1713 19.5132C24.3189 19.8822 24.3781 20.2069 24.3781 20.5464C24.3781 20.9893 24.2747 21.4173 24.0828 21.8306C23.8909 22.2144 23.6695 22.5539 23.4038 22.8639C22.9314 23.3805 22.3854 23.7643 21.795 24.0152C21.2045 24.2662 20.5697 24.3842 19.9202 24.3842ZM11.1375 9.59387C11.049 9.59387 10.7538 9.59387 10.3848 9.96289C10.1043 10.2286 9.91241 10.5091 9.77957 10.8191C9.64672 11.129 9.58766 11.4833 9.58766 11.8376C9.58766 12.4575 9.73526 13.1217 10.0305 13.8302C10.3404 14.5683 10.7981 15.3506 11.359 16.1329C11.9347 16.9153 12.5841 17.6976 13.3075 18.4209C14.0308 19.1294 14.7982 19.7936 15.5953 20.3841C16.3628 20.945 17.1453 21.3878 17.9276 21.7273C19.0495 22.2144 20.0826 22.3325 20.9239 21.9782C21.2192 21.8601 21.4849 21.6535 21.7505 21.3878C21.8834 21.2402 21.9869 21.0926 22.0754 20.9007C22.1197 20.7974 22.1491 20.6793 22.1491 20.576C22.1491 20.5464 22.1491 20.5021 22.1048 20.4136L19.6398 18.7013C19.5364 18.6275 19.4331 18.5685 19.3445 18.539C19.2855 18.5685 19.1971 18.6128 19.0347 18.7751L18.4738 19.336C18.0457 19.7641 17.3667 19.8822 16.8206 19.6903L16.5549 19.5722C16.2154 19.3951 15.8315 19.1294 15.4034 18.7604C14.9901 18.4061 14.5917 18.0371 14.1636 17.6238C13.7503 17.1957 13.3813 16.7972 13.027 16.3839C12.6432 15.9263 12.3775 15.5573 12.2004 15.2473L12.038 14.8635C11.9937 14.7159 11.9789 14.5535 11.9789 14.4059C11.9789 13.9926 12.1266 13.6236 12.407 13.3284L12.968 12.7527C13.1304 12.5903 13.1894 12.5018 13.2189 12.4427C13.1746 12.3394 13.1156 12.2508 13.0418 12.1475L11.3147 9.71199L11.1375 9.59387Z" fill="white"/>
                     </svg>
                     <div class="footer__nav--texto">
-                        <p>healthcare@medical.com <br> healthcare@medical.com</p>
+                        <p>+(54) 9 11 5107-4885</p>
                     </div>       
                 </div> 
                 <div class="footer__nav">
@@ -624,7 +619,7 @@
                         <path d="M16.5 2.75C8.91825 2.75 2.75 8.91825 2.75 16.5C2.75 24.0817 8.91825 30.25 16.5 30.25C24.0817 30.25 30.25 24.0817 30.25 16.5C30.25 8.91825 24.0817 2.75 16.5 2.75ZM21.0279 22.9721L15.125 17.0692V8.25H17.875V15.9307L22.9721 21.0279L21.0279 22.9721Z" fill="white"/>
                     </svg>
                     <div class="footer__nav--texto">
-                        <p>healthcare@medical.com <br> healthcare@medical.com</p>
+                        <p>Lunes-Viernes: 8:00AM-8:00PM</p>
                     </div>       
                 </div> 
                 <div class="footer__nav">
@@ -632,7 +627,7 @@
                         <path d="M20.8333 4.1665H4.16659C3.02075 4.1665 2.09367 5.104 2.09367 6.24984L2.08325 18.7498C2.08325 19.8957 3.02075 20.8332 4.16659 20.8332H20.8333C21.9791 20.8332 22.9166 19.8957 22.9166 18.7498V6.24984C22.9166 5.104 21.9791 4.1665 20.8333 4.1665ZM20.8333 8.33317L12.4999 13.5415L4.16659 8.33317V6.24984L12.4999 11.4582L20.8333 6.24984V8.33317Z" fill="white"/>
                     </svg>
                     <div class="footer__nav--texto">
-                        <p>healthcare@medical.com <br> healthcare@medical.com</p>
+                        <p>perezalisedogambiniorl@gmail.com</p>
                     </div>       
                 </div> 
             </div>
